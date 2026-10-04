@@ -1,0 +1,16 @@
+.venv/
+venv/
+.uv-cache/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+.env.local
+*.db
+data/*.db
+data/*.db-*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
