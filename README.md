@@ -34,6 +34,10 @@ $env:DATABASE_URL = "postgresql://用户名:密码@主机/数据库?sslmode=requ
 
 服务地址 `http://127.0.0.1:8000`，Swagger：`http://127.0.0.1:8000/docs`。`DATABASE_URL` 必须是 PostgreSQL 连接串；`postgres://` 和 `postgresql://` 前缀会自动转换为 psycopg 驱动格式。应用启动时自动创建 `calculation_history` 表。连接串仅放在运行环境，不提交真实 `.env` 或数据库密码。
 
+## 表达式语法
+
+支持四则运算、括号、一元正负号、右结合乘方 `^`、后缀阶乘 `!`，以及 `sin`、`cos`、`tan`、`arcsin`、`arccos`、`arctan`、`sqrt`、`abs`、`ln`、`log`、`exp`。常数用 `π`（或 `pi`）和 `e`。函数需带括号，例如 `sin(π/2)+sqrt(9)`；三角函数及反三角函数的角度单位均为弧度，`log` 以 10 为底。阶乘仅接受 0 到 170 的整数；函数定义域外的输入返回 400，不写入历史。
+
 ## API
 
 | 方法 | 路径 | 说明 |
